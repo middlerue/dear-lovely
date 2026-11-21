@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="theme-color" content="#3e0003"><meta name="robots" content="noindex,nofollow,noarchive">
+<title>Dear Lovely ♡ | Private Inbox</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<header><div class="wrap topnav"><div class="wordmark">DEAR LOVELY <span>♡</span></div><nav class="navlinks"><a class="navlink" href="index.html">← Public Website</a></nav></div></header>
+<main>
+<div class="admin-login-wrap" id="loginView" hidden>
+  <form class="write-panel" id="loginForm">
+    <h3>Lovely's Inbox ♡</h3><p class="admin-welcome">Private letters, for your eyes only.</p>
+    <div class="field"><label for="adminEmail">Admin email</label><input type="email" id="adminEmail" name="email" autocomplete="username" required></div>
+    <div class="field"><label for="adminPassword">Password</label><input type="password" id="adminPassword" name="password" autocomplete="current-password" required></div>
+    <button class="btn burgundy widebutton" type="submit" id="loginButton">Open my inbox ♡</button>
+    <p class="login-error" id="loginError" role="alert"></p>
+  </form>
+</div>
+<section class="admin-dashboard" id="dashboard" aria-labelledby="adminTitle">
+  <div class="wrap">
+    <div class="adminhead"><div><div class="eyebrow" style="color:#914350">PRIVATE · DEAR LOVELY / CONTENT REVIEW</div><h2 id="adminTitle">Lovely's Inbox ♡</h2><p class="admin-muted" id="adminIdentity"></p></div><button type="button" class="btn burgundy" id="logoutButton">Sign Out</button></div>
+    <div class="admin-disclaimer">Only approved and published letters and comments are visible on the public website. Review carefully and remove identifying details before publishing.</div>
+    <div class="adminbox"><h3>Unanswered letters <span id="pendingCount"></span></h3><div id="pendingList">Loading…</div></div>
+    <div class="adminbox"><h3>Comments awaiting approval <span id="commentCount"></span></h3><div id="pendingComments">Loading…</div></div>
+    <div class="adminbox"><h3>Published letters <span id="publishedCount"></span></h3><div id="publishedAdminList">Loading…</div></div>
+  </div>
+</section>
+<div class="wrap" id="startingStatus" style="min-height:35vh;text-align:center;padding:80px 20px" role="status">Checking private access… ♡</div>
+</main>
+<footer><div class="footname">Dear Lovely ♡</div><div>Private letters deserve careful hands.</div></footer>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="config.js"></script><script src="admin.js"></script>
+</body></html>

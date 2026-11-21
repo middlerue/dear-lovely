@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="theme-color" content="#3e0003" />
+<title>Dear Lovely ♡ | Letters from the heart</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<header>
+  <div class="wrap topnav">
+    <div class="wordmark">DEAR LOVELY <span>♡</span></div>
+    <nav class="navlinks" aria-label="Main navigation">
+      <button type="button" class="navlink active" data-nav="home">Home</button>
+      <button type="button" class="navlink" data-nav="letters">Letters & Replies</button>
+      <button type="button" class="navlink" data-nav="write">Write a Letter</button>
+    </nav>
+  </div>
+</header>
+<main id="publicArea">
+ <section class="hero" id="home">
+  <div class="wrap hero-layout">
+   <div class="hero-copy">
+    <div class="eyebrow">AN OPEN LETTER TO EVERY HEART</div>
+    <h1>Some feelings are <em>easier to write.</em></h1>
+    <p class="intro">For the questions you keep to yourself, the love you can't explain, and the words you've never said out loud. There's a place for your story here.</p>
+    <div class="actions"><button class="btn" type="button" data-goto="write">Write to Lovely ♡</button><button class="btn outline" type="button" data-goto="letters">Read the Letters</button></div>
+   </div>
+   <div class="hero-art">
+     <img class="logo-image" id="originalLogo" alt="Dear Lovely wordmark from your design" src="dear-lovely-logo.png" />
+     <div class="envelope-stage" id="heroEnvelope" role="button" tabindex="0" aria-label="Open the envelope to read a sample letter" aria-pressed="false">
+      <div class="env-shadow"></div><div class="envelope-body"><div class="env-back"></div></div>
+      <div class="env-letter"><div class="script">Dear Lovely,</div><p>Is it okay to want someone, but still choose yourself?</p><div class="sig">— a hopeful heart ♡</div></div>
+      <div class="envelope-body"><div class="env-front"></div><div class="env-flap"></div><div class="wax">L</div></div>
+      <div class="stage-label" id="envelopeHint">TAP THE ENVELOPE TO OPEN ♡</div>
+     </div>
+     <div class="ornament"></div><p class="hint">sealed with love, opened with care</p>
+   </div>
+  </div>
+ </section>
+ <section class="section soft" aria-labelledby="how-title">
+   <div class="wrap"><div class="section-head"><div class="filigree">❦</div><h2 id="how-title">Your words, held gently.</h2><p>A little corner of the internet for anonymous letters and thoughtful replies.</p></div>
+    <div class="steps">
+      <div class="step"><div class="num">01</div><h3>Write a letter</h3><p>Tell Lovely what's on your mind. You can use a nickname or remain anonymous.</p></div>
+      <div class="step"><div class="num">02</div><h3>Wait for a reply</h3><p>Your letter first goes to a review inbox. Lovely chooses which letters to answer.</p></div>
+      <div class="step"><div class="num">03</div><h3>Share the warmth</h3><p>Published letters, advice, and approved reader comments can help other hearts too.</p></div>
+    </div>
+   </div>
+ </section>
+ <section class="section dark2" id="letters" aria-labelledby="letters-title">
+  <div class="wrap"><div class="section-head"><div class="filigree">♡</div><h2 id="letters-title">Letters & Replies</h2><div class="scribble">every heart has a story</div><p>Pick an envelope to open a letter, read Lovely's reply, and leave a kind thought of your own.</p></div>
+   <div class="filterbar" aria-label="Letter categories">
+    <button type="button" class="filter active" data-filter="All">All Letters</button><button type="button" class="filter" data-filter="Love">Love</button><button type="button" class="filter" data-filter="Healing">Healing</button><button type="button" class="filter" data-filter="Friendship">Friendship</button><button type="button" class="filter" data-filter="Confessions">Confessions</button>
+   </div>
+   <div class="letters-grid" id="lettersGrid" aria-live="polite"><div class="empty">Opening the letterbox… ♡</div></div>
+  </div>
+ </section>
+ <section class="section soft" id="write" aria-labelledby="write-title">
+  <div class="wrap"><div class="section-head"><div class="filigree">✧</div><h2 id="write-title">Write to Lovely</h2><p>No perfect words needed, sweetheart. Just start with “Dear Lovely…”</p></div>
+   <div class="setup-notice" id="setupNotice" role="status"></div>
+   <form class="write-panel" id="letterForm">
+    <h3>Dear Lovely,</h3>
+    <div class="formrow">
+      <div class="field"><label for="nickname">Your nickname (optional)</label><input id="nickname" maxlength="45" placeholder="a hopeful heart" autocomplete="off"><div class="smallnote">Leave blank to be Anonymous.</div></div>
+      <div class="field"><label for="category">Choose a category</label><select id="category"><option>Love</option><option>Healing</option><option>Friendship</option><option>Confessions</option></select></div>
+    </div>
+    <div class="field"><label for="subject">Subject of your letter *</label><input id="subject" maxlength="110" placeholder="Should I wait for someone who isn't sure?" required></div>
+    <div class="field"><label for="message">Your letter *</label><textarea id="message" maxlength="4500" minlength="12" required placeholder="Dear Lovely,\n\nThere's something I've been wanting to ask..."></textarea></div>
+    <div class="notice">♡ <strong>A little privacy reminder:</strong> Please don't share real full names, contact details, addresses, or other identifying information. If Lovely chooses to answer, your letter and nickname may appear on this public website.</div>
+    <label class="checkline"><input id="letterConsent" type="checkbox" required><span>I understand my letter may be published publicly after review, along with Lovely's reply.</span></label>
+    <div class="submit"><button type="submit" class="btn burgundy">Seal & Send My Letter ♡</button><span class="smallnote">Letters are reviewed before they appear publicly.</span></div>
+   </form>
+  </div>
+ </section>
+</main>
+
+<footer><div class="footname">Dear Lovely ♡</div><div>Some feelings are easier to write than to say.</div><p>Kind words only, please. This is a creative advice space, not professional or emergency counseling.</p><small>Letters and comments are reviewed before publication</small></footer>
+<div class="overlay" id="letterOverlay" role="dialog" aria-modal="true" aria-label="Published letter and comments" aria-hidden="true"><button class="close" type="button" id="closeModal" aria-label="Close letter">×</button><div class="modal" id="letterModal"></div></div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="config.js"></script>
+<script src="public.js"></script>
+</body>
+</html>
