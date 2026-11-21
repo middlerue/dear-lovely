@@ -2,6 +2,6 @@
 // The publishable / anon key is safe in the browser WITH properly configured RLS.
 // NEVER put a Supabase secret key, service_role key, or your password in this file.
 window.DEAR_LOVELY_CONFIG = {
-  SUPABASE_URL: 'https://YOUR_PROJECT_ID.supabase.co',
-  SUPABASE_PUBLISHABLE_KEY: 'YOUR_SUPABASE_PUBLISHABLE_OR_ANON_KEY'
+  SUPABASE_URL: 'https://bxrsrcfjiycxuevahtod.supabase.co',
+  SUPABASE_PUBLISHABLE_KEY: 'sb_publishable_xFTd56MFa5LTlGIub2Javw_ekbUv8k1'
 };
